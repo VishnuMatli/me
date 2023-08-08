@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="styles/Images/Logo.png" type = "image/x-icon">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo"></img>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="DS.html">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer, <br>Penetration Tester, <br>Network Engineer.</p>
+                <h1>Hi, I'm <span>Vishnu</span><br>from India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey there! I'm Vishnu, a passionate and multifaceted individual on a journey through the realms of technology. As a dedicated student, I'm currently pursuing a diploma in computers, immersing myself in the fascinating world of computer science.
+
+                        My curiosity led me to become a penetration tester, delving deep into the realm of cybersecurity to uncover vulnerabilities and ensure digital landscapes remain secure. Simultaneously, I embrace my role as a network engineer, weaving connections and optimizing digital pathways for seamless communication.
+                        
+                        The creative side of me thrives as a UI/UX developer, crafting captivating and user-friendly digital experiences that merge aesthetics with functionality.
+                        
+                        My journey is a fusion of knowledge, combining technical expertise with artistic flair. From deciphering code to conceptualizing designs, I'm dedicated to pushing boundaries and expanding horizons in the ever-evolving tech landscape. Join me as I explore, innovate, and create in the world of computers and beyond!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Full stack in Web Development.</li>
+                            <li><span>2020-2022</span><br>Worked at PMG Disha on computer training.</li>
+                            <li><span>2019-2020</span><br>App development in Whitehat Jr.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <!--<li><span>2016</span><br>UI/UX Design training at ET Institute</li>
+                            <li><span>2016 Development</span><br>MBA from MIT Bangalore</li>-->
+                            <li><span>2021-2024</span><br>3yrs Diploma in computer engineering.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------SERVICES---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Development</h2>
+                    <p>With a deep-rooted passion for coding and a keen eye for design, I specialize in crafting user-centric applications that seamlessly blend functionality with aesthetics. From brainstorming concepts to fine-tuning the tiniest details, I thrive on bringing unique visions to life.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Hello! I'm a web developer who loves building things on the internet. I use my coding skills to create awesome websites and make them look and work great. Whether it's designing how things look or making sure they run smoothly behind the scenes, I'm here to bring ideas to life online. Join me in exploring the world of web development and the exciting possibilities it offers!</p>
+                </div>
+                <div>
+
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Hey there! I'm a UI/UX developer, and my mission is to make digital experiences super friendly and fun. Think of me as the person who designs how apps and websites look and feel, making them easy and enjoyable for you to use. I combine creativity and design skills to create layouts, buttons, and interactions that just make sense. So, if you've ever enjoyed using an app or a website, there's a good chance a UI/UX developer like me played a part in making it awesome!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------PORTFOLIO--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h2>My Portfolio</h2>
+                        <p>Portfolio is desinged for my BioData information</p>
+                        <a href="index.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h2>My Data Server</h2>
+                        <p>Welcome to the storage server world! I'm like a giant digital closet, where your important stuff, like photos, files, and videos, can be kept safe and organized. Just think of me as a trustworthy friend who holds onto your digital belongings, making sure they're ready for you whenever you want them. So, whether you're saving memories or important work, I've got your back!</p>
+                        <a href="DS.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h2>My Gallery</h2>
+                        <p>Step into 'My Gallery,' a virtual space where memories come to life! I'm your personal showcase, displaying all your favorite photos and moments in one place. Think of me as a cozy room filled with snapshots of fun times, adventures, and special occasions.</p>
+                        <a href="gallery.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------CONTACT---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> matlikinnu@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +91-8106895785</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/vishnu.matli.7/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/matli_vishnu"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/_vishnu_._chowdary/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://shorturl.at/frRX3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Vishnu Hackings. Made with <i class="fas fa-heart"></i> by Vishnu Matli</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tabLinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        // JavaScript for handling the mobile navigation menu
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
+
+    </script>
+</body>
+
+</html>
