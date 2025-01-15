@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0077cc, #00c6ff, #00ffad);
+            animation: gradientAnimation 10s infinite;
+            background-size: 200% 200%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .contact-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        a {
+            color: #0077cc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: #4361ee;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+    </style>
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>If you would like to get in touch, please reach out:</p>
+        <ul>
+            <li>Phone: <a href="tel:+918106895785">+91-8106895785</a></li>
+            <li>Email: <a href="mailto:matlikinnu@gmail.com">matlikinnu@gmail.com</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/vishnu.matli.7/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/matli_vishnu"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/_vishnu_._chowdary/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/vishnu-matli/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</body>
+</html>
