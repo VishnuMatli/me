@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HanDiy Cloud</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media only screen and (max-width: 600px) {
+            body {
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+                height: 100vh;
+            }
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        }
+    </style>
+    </head>
+    <body id="m">
+        <div id="title">
+            <h1>HanDiy Cloud</h1>
+        </div>
+        <div id="tailscale">
+            <h1>On Tailnet</h1>
+            <div id="truenastailnet" class="logo">
+                <img src="truenas.png" alt="TrueNAS Portal">
+                <p>Admin Portal</p>
+            </div>
+            <div id="embytailnet" class="logo">
+                <img src="emby.png" alt="Emby Portal">
+                <p>Media Portal</p>
+            </div>
+            <div id="Qbittailnet" class="logo">
+                <img src="qbit.png" alt="QbitTorrent">
+                <p>Torrent Portal</p>
+            </div>
+            <div id="SMBtailnet" class="logo">
+                <img src="smb.png" alt="SMB">
+                <p>Pool Portal</p>
+            </div>
+            <div id="VMtailnet" class="logo">
+                <img src="vm.png" alt="Virtual Machine">
+                <p>Virtual machines</p>
+            </div>
+        </div>
+        <div id="local">
+            <h1>On Local Net</h1>
+            <div id="truenas" class="logo">
+                <img src="truenas.png" alt="TrueNAS Portal">
+                <p>Admin Portal</p>
+            </div>
+            <div id="emby" class="logo">
+                <img src="emby.png" alt="Emby Portal">
+                <p>Media Portal</p>
+            </div>
+            <div id="Qbit" class="logo">
+                <img src="qbit.png" alt="QbitTorrent">
+                <p>Torrent Portal</p>
+            </div>
+            <div id="SMB" class="logo">
+                <img src="smb.png" alt="SMB">
+                <p>Pool Portal</p>
+            </div>
+            <div id="VM" class="logo">
+                <img src="vm.png" alt="Virtual Machine">
+                <p>Virtual machines</p>
+            </div>
+        </div>
+        <b>Developed By Vishnu Chowdary. All rights reserved (2024).</b>
+        <script>
+            document.getElementById('truenastailnet').addEventListener('click', function () {
+                window.open('http://100.103.46.30/', '_blank');
+            });
+            document.getElementById('truenas').addEventListener('click', function () {
+                window.open('http://192.168.31.50/', '_blank');
+            });
+            document.getElementById('embytailnet').addEventListener('click', function () {
+                window.open('http://100.103.46.30:8096/', '_blank');
+            });
+            document.getElementById('Qbittailnet').addEventListener('click', function () {
+                window.open('http://100.103.46.30:30024/', '_blank');
+            });
+            document.getElementById('emby').addEventListener('click', function () {
+                window.open('http://192.168.31.50:8096/', '_blank');
+            });
+            document.getElementById('Qbit').addEventListener('click', function () {
+                window.open('http://192.168.31.50:30024/', '_blank');
+            });
+            document.getElementById('SMB').addEventListener('click', function () {
+                window.open('https://drive.google.com/file/d/10hRf27kAVMRpv7UiSCXI7h8kcTp70ECx/view?usp=sharing', '_blank');
+            });
+            document.getElementById('SMBtailnet').addEventListener('click', function () {
+                window.open('https://drive.google.com/file/d/10hRf27kAVMRpv7UiSCXI7h8kcTp70ECx/view?usp=sharing', '_blank');
+            });
+            document.getElementById('VMtailnet').addEventListener('click', function () {
+                window.open('change me', '_blank');
+            });
+            document.getElementById('VM').addEventListener('click', function () {
+                window.open('change me', '_blank');
+            });
+        </script>
+    </body>
+</html>

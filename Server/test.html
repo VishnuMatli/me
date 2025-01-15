@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HanDiy Cloud VR</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        margin: 0;
+      }
+
+      /* Font Styles for Titles */
+      .title-font {
+        font-family: 'Steelfish Rg', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 2em;
+        color: rgb(146, 20, 20);
+        text-shadow: 2px 2px 2px black;
+      }
+
+      .portal-title {
+        font-size: 1.5em;
+        color: rgb(4, 90, 17);
+        text-shadow: 2px 2px 2px black;
+      }
+
+      .portal-title-local {
+        font-size: 1.5em;
+        color: rgb(10, 55, 169);
+        text-shadow: 2px 2px 2px black;
+      }
+
+      /* Font Styles for Portal Labels */
+      .portal-label {
+        font-size: 0.6em;
+        color: black;
+        text-align: center;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Camera and Cursor -->
+      <a-entity
+        camera
+        look-controls
+        position="0 1.6 0"
+        rotation="0 0 0"
+      >
+        <a-entity
+          cursor="fuse: true; fuseTimeout: 500"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: black; shader: flat"
+        ></a-entity>
+      </a-entity>
+
+      <!-- Title -->
+      <a-entity position="0 5 -8">
+        <a-text
+          value="HanDiy Cloud VR"
+          align="center"
+          width="8"
+          color="#921414"
+          class="title-font section-title"
+        ></a-text>
+      </a-entity>
+
+      <!-- On Tailnet Section -->
+      <a-entity position="0 3.5 -8">
+        <a-text
+          value="On Tailnet"
+          align="center"
+          width="8"
+          color="#049011"
+          class="title-font portal-title"
+        ></a-text>
+      </a-entity>
+
+      <!-- Tailnet Portals -->
+      <a-plane
+        id="truenastailnet"
+        position="-4 2 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: truenas.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Admin Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="embytailnet"
+        position="-2 2 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: emby.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Media Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="Qbittailnet"
+        position="0 2 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: qbit.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Torrent Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="SMBtailnet"
+        position="2 2 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: smb.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Pool Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="VMtailnet"
+        position="4 2 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: vm.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Virtual Machines"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <!-- On Local Net Section -->
+      <a-entity position="0 1 -8">
+        <a-text
+          value="On Local Net"
+          align="center"
+          width="8"
+          color="#0a37a9"
+          class="title-font portal-title-local"
+        ></a-text>
+      </a-entity>
+
+      <!-- Local Net Portals -->
+      <a-plane
+        id="truenas"
+        position="-4 -0.5 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: truenas.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Admin Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="emby"
+        position="-2 -0.5 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: emby.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Media Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="Qbit"
+        position="0 -0.5 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: qbit.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Torrent Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="SMB"
+        position="2 -0.5 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: smb.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Pool Portal"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+
+      <a-plane
+        id="VM"
+        position="4 -0.5 -6"
+        geometry="height: 1; width: 1.5"
+        material="src: vm.png; transparent: true"
+        class="clickable"
+      >
+        <a-text
+          value="Virtual Machines"
+          position="0 -0.8 0"
+          width="2"
+          class="portal-label"
+        ></a-text>
+      </a-plane>
+    </a-scene>
+
+    <script>
+      // JavaScript to handle click events
+      document.addEventListener('DOMContentLoaded', function () {
+        const portals = {
+          truenastailnet: 'http://100.103.46.30/',
+          embytailnet: 'http://100.103.46.30:8096/',
+          Qbittailnet: 'http://100.103.46.30:30024/',
+          SMBtailnet: 'https://drive.google.com/file/d/10hRf27kAVMRpv7UiSCXI7h8kcTp70ECx/view?usp=sharing',
+          VMtailnet: 'change me',
+          truenas: 'http://192.168.31.50/',
+          emby: 'http://192.168.31.50:8096/',
+          Qbit: 'http://192.168.31.50:30024/',
+          SMB: 'https://drive.google.com/file/d/10hRf27kAVMRpv7UiSCXI7h8kcTp70ECx/view?usp=sharing',
+          VM: 'change me',
+        };
+
+        Object.keys(portals).forEach((id) => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.addEventListener('click', () => {
+              window.open(portals[id], '_blank');
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

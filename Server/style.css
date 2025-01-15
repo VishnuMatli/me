@@ -1,0 +1,61 @@
+
+#title{
+    font-size: xx-large;
+    align-items:center;
+    text-align:center;
+    font-weight: bold;
+    font-family: 'Steelfish Rg', 'helvetica neue',helvetica, arial, sans-serif;
+}
+#title h1{
+    color: rgb(146, 20, 20);
+    text-shadow: 2px 2px 2px black;
+}
+#tailscale{
+    font-size: x-large;
+    align-items:center;
+    text-align:center;
+    font-weight: bold;
+    font-family: 'Steelfish Rg', 'helvetica neue',helvetica, arial, sans-serif;
+}
+#tailscale h1{
+    color: rgb(4, 90, 17);
+    text-shadow: 2px 2px 2px black;
+}
+#local{
+    font-size: x-large;
+    align-items:center;
+    text-align:center;
+    font-weight: bold;
+    font-family: 'Steelfish Rg', 'helvetica neue',helvetica, arial, sans-serif;
+}
+#local h1{
+    color: rgb(10, 55, 169);
+    text-shadow: 2px 2px 2px black;
+}
+.logo {
+    display:inline-flex;
+    width: 200px;
+    background-color: transparent;
+}
+.logo img {
+    width: 50%;
+    border-radius: 50%;
+}
+.logo:hover{
+    cursor: pointer;
+}
+b{
+    font-family: sans-serif;
+    color:black;
+    align-items: center;
+    text-align: center;
+    position:fixed;
+    width: 50%;
+    bottom: 10px;
+}
+body{
+    background-image: url("https://images8.alphacoders.com/706/706494.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
