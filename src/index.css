@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* --- THEME FONTS --- */
+.theme-dark {
+  font-family: 'Courier New', Courier, monospace;
 }
+
+.theme-light {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* --- SCROLL PROGRESS BAR --- */
+.scroll-tracker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #33ff00;
+  z-index: 9999;
+  width: 0%;
+}
+
+/* --- RETRO COMPUTER 3D STYLES --- */
+.retro-container {
+  background-color: #111; /* Dark room background */
+  perspective: 1000px; /* Essential for 3D effect */
+}
+
+/* 1. MONITOR HEAD */
+.retro-bezel {
+  background-color: #d1d5db;
+  border-radius: 16px 16px 4px 4px;
+  box-shadow: 
+    inset 0 0 10px rgba(0,0,0,0.2), 
+    -5px 5px 15px rgba(0,0,0,0.5);
+  padding: 16px;
+  position: relative;
+  z-index: 20;
+}
+
+/* 2. GLOWING SCREEN */
+.retro-screen {
+  background-color: #000;
+  border-radius: 4px;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+  border: 12px solid #262626;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3. MONITOR NECK */
+.monitor-neck {
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(to right, #9ca3af, #d1d5db, #9ca3af);
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* 4. MONITOR FOOT (3D Trapezoid) */
+.monitor-foot {
+  width: 240px;
+  height: 40px;
+  background-color: #d1d5db;
+  margin: 0 auto;
+  border-radius: 4px 4px 0 0;
+  transform: perspective(400px) rotateX(20deg); /* The 3D Tilt */
+  box-shadow: 
+    0 20px 30px rgba(0,0,0,0.6), 
+    inset 0 2px 5px rgba(255,255,255,0.4);
+  position: relative;
+  top: -10px;
+  z-index: 10;
+}
+
+/* 5. VISUAL EFFECTS */
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.1)
+  );
+  background-size: 100% 4px;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.phosphor-text {
+  color: #33ff00;
+  text-shadow: 0 0 4px #33ff00;
+  font-family: 'Courier New', Courier, monospace;
+} 
